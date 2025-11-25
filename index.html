@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matunda ya Afrika Company - The Pride of African Craftsmanship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-yellow: #F2C94C;
+            --primary-green: #2F9B6D;
+            --primary-brown: #8B4513;
+            --dark-brown: #5D2F0B;
+            --light-yellow: #FFF9E6;
+            --light-green: #E8F5F0;
+            --white: #FFFFFF;
+            --black: #000000;
+            --gray: #6C757D;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-brown);
+            background-color: var(--light-yellow);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            color: var(--primary-brown);
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-brown);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        
+        .lang-toggle button {
+            background: none;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .lang-toggle button.active {
+            background-color: var(--primary-green);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://z-cdn-media.chatglm.cn/files/efc8f216-8fa8-4df4-8aa7-3070bfa6a262_1763158333554%20%281%29.jpg?auth_key=1864053280-32fedd884a254dcaa7cdab7f926c1379-0-2d8e21cde3ac0e47264e34619bf94644');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #25805a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary-yellow);
+            color: var(--dark-brown);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e6b940;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-brown);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: var(--gray);
+        }
+        
+        /* Problem Section */
+        .problem {
+            background-color: var(--white);
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        
+        /* Solution Section */
+        .solution {
+            background-color: var(--light-green);
+        }
+        
+        .product-features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            width: 30%;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-brown);
+        }
+        
+        .feature-desc {
+            color: var(--gray);
+        }
+        
+        .product-images {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .product-image {
+            width: 45%;
+            max-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Investment Section */
+        .investment {
+            background-color: var(--white);
+        }
+        
+        .investment-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .investment-info {
+            width: 48%;
+            margin-bottom: 30px;
+        }
+        
+        .investment-chart {
+            width: 48%;
+            background-color: var(--light-yellow);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-brown);
+        }
+        
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+        
+        .investment-metrics {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        
+        .metric-card {
+            width: 23%;
+            background-color: var(--light-green);
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-green);
+            text-align: center;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-right: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background-color: var(--light-yellow);
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            background-color: var(--white);
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            width: 30%;
+            margin-bottom: 30px;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-yellow);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .product-features {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .feature-card {
+                width: 70%;
+            }
+            
+            .investment-details {
+                flex-direction: column;
+            }
+            
+            .investment-info, .investment-chart {
+                width: 100%;
+            }
+            
+            .metric-card {
+                width: 48%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .feature-card {
+                width: 90%;
+            }
+            
+            .product-images {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .product-image {
+                width: 70%;
+            }
+            
+            .metric-card {
+                width: 100%;
+            }
+            
+            .footer-section {
+                width: 100%;
+            }
+        }
+        
+        /* Pitch Deck Download Button */
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--primary-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        
+        .download-btn:hover {
+            background-color: #25805a;
+            transform: scale(1.1);
+        }
+        
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background-color: var(--dark-brown);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            bottom: 70px;
+            right: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .download-btn:hover .tooltip {
+            opacity: 1;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            max-width: 800px;
+            margin: 50px auto 0;
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--primary-brown);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-green);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-submit {
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .form-submit:hover {
+            background-color: #25805a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .form-message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="https://z-cdn-media.chatglm.cn/files/3a730a5c-5043-41ed-973c-36995e227555_Logo%20MAC-DRC.jpg?auth_key=1864053280-0047a9b95d774d0a8acb6df33a97362c-0-10008cb491a4fc47c9a98d9e7ee36161" alt="MAC Logo">
+                    <div class="logo-text">Matunda ya Afrika Company</div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#problem" data-fr="Le Problème" data-en="The Problem">Le Problème</a></li>
+                    <li><a href="#solution" data-fr="Notre Solution" data-en="Our Solution">Notre Solution</a></li>
+                    <li><a href="#investment" data-fr="Opportunité d'Investissement" data-en="Investment Opportunity">Opportunité d'Investissement</a></li>
+                    <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                </ul>
+                <div class="lang-toggle">
+                    <button class="active" id="fr-btn">FR</button>
+                    <button id="en-btn">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-fr="Matunda ya Afrika Company : Transformer l'or des champs en or liquide." data-en="Matunda ya Afrika Company: Transforming field gold into liquid gold.">Matunda ya Afrika Company : Transformer l'or des champs en or liquide.</h1>
+            <p data-fr="La première production semi-industrielle d'huile d'arachide pure à Bukavu, RDC." data-en="The first semi-industrial production of pure peanut oil in Bukavu, DRC.">La première production semi-industrielle d'huile d'arachide pure à Bukavu, RDC.</p>
+            <div class="hero-buttons">
+                <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="btn btn-primary" data-fr="Investir dans le projet" data-en="Invest in the project">Investir dans le projet</a>
+                <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="btn btn-secondary" data-fr="Faire un don" data-en="Make a donation">Faire un don</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title" data-fr="Le Problème" data-en="The Problem">Le Problème</h2>
+            <p class="section-subtitle" data-fr="Le marché de Bukavu consomme 1,6 million de litres par mois d'huile d'arachide mais dépend de plus de 85% d'importations coûteuses et de qualité incertaine. Cela entraîne une fuite de capitaux et prive la région de valeur ajoutée locale." data-en="The Bukavu market consumes 1.6 million liters per month of peanut oil but depends on over 85% of expensive and uncertain quality imports. This leads to capital flight and deprives the region of local value added.">Le marché de Bukavu consomme 1,6 million de litres par mois d'huile d'arachide mais dépend de plus de 85% d'importations coûteuses et de qualité incertaine. Cela entraîne une fuite de capitaux et prive la région de valeur ajoutée locale.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">1.6M</div>
+                    <div class="stat-label" data-fr="Litres consommés/mois" data-en="Liters consumed/month">Litres consommés/mois</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85%+</div>
+                    <div class="stat-label" data-fr="Dépendance aux importations" data-en="Import dependency">Dépendance aux importations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0%</div>
+                    <div class="stat-label" data-fr="Production locale industrielle" data-en="Local industrial production">Production locale industrielle</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2 class="section-title" data-fr="Notre Solution" data-en="Our Solution">Notre Solution</h2>
+            <p class="section-subtitle" data-fr="Huile d'Arachide 100% Locale, pure et non raffinée, riche en nutriments et fraîche (<2 semaines du champ à la table)." data-en="100% Local Peanut Oil, pure and unrefined, rich in nutrients and fresh (<2 weeks from field to table).">Huile d'Arachide 100% Locale, pure et non raffinée, riche en nutriments et fraîche (<2 semaines du champ à la table).</p>
+            
+            <div class="product-features">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="feature-title" data-fr="100% Naturelle" data-en="100% Natural">100% Naturelle</div>
+                    <div class="feature-desc" data-fr="Huile pure, non raffinée préservant tous les bienfaits nutritionnels (vitamine E, antioxydants)" data-en="Pure, unrefined oil preserving all nutritional benefits (vitamin E, antioxidants)">Huile pure, non raffinée préservant tous les bienfaits nutritionnels (vitamine E, antioxydants)</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="feature-title" data-fr="Prix Compétitif" data-en="Competitive Price">Prix Compétitif</div>
+                    <div class="feature-desc" data-fr="10-15% moins cher que les importations premium, accessible à tous les ménages" data-en="10-15% cheaper than premium imports, accessible to all households">10-15% moins cher que les importations premium, accessible à tous les ménages</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="feature-title" data-fr="Impact Social" data-en="Social Impact">Impact Social</div>
+                    <div class="feature-desc" data-fr="Partenariat direct avec 200+ agriculteurs locaux, création d'emplois et développement économique" data-en="Direct partnership with 200+ local farmers, job creation and economic development">Partenariat direct avec 200+ agriculteurs locaux, création d'emplois et développement économique</div>
+                </div>
+            </div>
+            
+            <div class="product-images">
+                <div class="product-image">
+                    <img src="https://z-cdn-media.chatglm.cn/files/efc8f216-8fa8-4df4-8aa7-3070bfa6a262_1763158333554%20%281%29.jpg?auth_key=1864053280-32fedd884a254dcaa7cdab7f926c1379-0-2d8e21cde3ac0e47264e34619bf94644" alt="Kivu Oil 1L">
+                </div>
+                <div class="product-image">
+                    <img src="https://z-cdn-media.chatglm.cn/files/c6382a39-2d47-4cdc-80a6-bea82e5a4245_1763158678896%20%281%29.jpg?auth_key=1864053280-99ccc1a7a9af48ee844d1e2543f3e44e-0-1cdc37c57dbd6078a3bf97fe74da9442" alt="Kivu Oil 20L">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="investment">
+        <div class="container">
+            <h2 class="section-title" data-fr="Opportunité d'Investissement" data-en="Investment Opportunity">Opportunité d'Investissement</h2>
+            <p class="section-subtitle" data-fr="Rejoignez-nous dans la construction de la souveraineté alimentaire de la RDC avec un retour sur investissement attractif et un impact social mesurable." data-en="Join us in building the food sovereignty of the DRC with an attractive return on investment and measurable social impact.">Rejoignez-nous dans la construction de la souveraineté alimentaire de la RDC avec un retour sur investissement attractif et un impact social mesurable.</p>
+            
+            <div class="investment-details">
+                <div class="investment-info">
+                    <h3 data-fr="Besoin de financement" data-en="Funding Need">Besoin de financement</h3>
+                    <p data-fr="125 000 $ pour lancer la production semi-industrielle d'huile d'arachide à Bukavu" data-en="$125,000 to launch the semi-industrial peanut oil production in Bukavu">125 000 $ pour lancer la production semi-industrielle d'huile d'arachide à Bukavu</p>
+                    
+                    <h3 style="margin-top: 30px;" data-fr="Offre d'investissement" data-en="Investment Offer">Offre d'investissement</h3>
+                    <p data-fr="33% de parts (Equity) ou Prêt + Equity mixte" data-en="33% equity or Loan + Equity mix">33% de parts (Equity) ou Prêt + Equity mixte</p>
+                    
+                    <h3 style="margin-top: 30px;" data-fr="Répartition des fonds" data-en="Fund Allocation">Répartition des fonds</h3>
+                    <ul>
+                        <li data-fr="52% équipements & infrastructure" data-en="52% equipment & infrastructure">52% équipements & infrastructure</li>
+                        <li data-fr="32% fonds de roulement" data-en="32% working capital">32% fonds de roulement</li>
+                        <li data-fr="8% marketing & lancement" data-en="8% marketing & launch">8% marketing & lancement</li>
+                        <li data-fr="4% légal & administratif" data-en="4% legal & administrative">4% légal & administratif</li>
+                        <li data-fr="4% réserve de contingence" data-en="4% contingency reserve">4% réserve de contingence</li>
+                    </ul>
+                </div>
+                
+                <div class="investment-chart">
+                    <div class="chart-title" data-fr="Répartition des fonds d'investissement" data-en="Investment Fund Allocation">Répartition des fonds d'investissement</div>
+                    <div class="chart-container">
+                        <canvas id="fundChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="investment-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">78%</div>
+                    <div class="metric-label" data-fr="TRI projeté sur 3 ans" data-en="Projected IRR over 3 years">TRI projeté sur 3 ans</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">8 mois</div>
+                    <div class="metric-label" data-fr="Seuil de rentabilité" data-en="Break-even point">Seuil de rentabilité</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">35M$</div>
+                    <div class="metric-label" data-fr="Marché potentiel (Bukavu & Goma)" data-en="Potential market (Bukavu & Goma)">Marché potentiel (Bukavu & Goma)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">4-6x</div>
+                    <div class="metric-label" data-fr="Multiple de sortie potentiel" data-en="Potential exit multiple">Multiple de sortie potentiel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-fr="Questions Fréquentes" data-en="Frequently Asked Questions">Questions Fréquentes</h2>
+            <p class="section-subtitle" data-fr="Trouvez des réponses aux questions courantes sur notre projet d'investissement." data-en="Find answers to common questions about our investment project.">Trouvez des réponses aux questions courantes sur notre projet d'investissement.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-fr="Quel est le retour sur investissement attendu ?" data-en="What is the expected return on investment?">Quel est le retour sur investissement attendu ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Nous projetons un TRI de 78% sur 3 ans avec un multiple de sortie potentiel de 4-6x. Le seuil de rentabilité est attendu dès le 8ème mois d'opération." data-en="We project an IRR of 78% over 3 years with a potential exit multiple of 4-6x. The break-even point is expected as early as the 8th month of operation.">Nous projetons un TRI de 78% sur 3 ans avec un multiple de sortie potentiel de 4-6x. Le seuil de rentabilité est attendu dès le 8ème mois d'opération.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-fr="Comment mon investissement sera-t-il utilisé ?" data-en="How will my investment be used?">Comment mon investissement sera-t-il utilisé ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="52% pour les équipements et infrastructure, 32% pour le fonds de roulement, 8% pour le marketing et lancement, 4% pour les aspects légaux et administratifs, et 4% comme réserve de contingence." data-en="52% for equipment and infrastructure, 32% for working capital, 8% for marketing and launch, 4% for legal and administrative aspects, and 4% as contingency reserve.">52% pour les équipements et infrastructure, 32% pour le fonds de roulement, 8% pour le marketing et lancement, 4% pour les aspects légaux et administratifs, et 4% comme réserve de contingence.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-fr="Quels sont les risques associés à cet investissement ?" data-en="What are the risks associated with this investment?">Quels sont les risques associés à cet investissement ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Nous avons identifié plusieurs risques potentiels : approvisionnement en arachides, coupures électriques, fluctuations des taux de change, concurrence des importations, normes qualité/sanitaires, et insécurité régionale. Pour chaque risque, nous avons mis en place des stratégies de mitigation." data-en="We have identified several potential risks: peanut supply, power cuts, exchange rate fluctuations, competition from imports, quality/sanitary standards, and regional insecurity. For each risk, we have put in place mitigation strategies.">Nous avons identifié plusieurs risques potentiels : approvisionnement en arachides, coupures électriques, fluctuations des taux de change, concurrence des importations, normes qualité/sanitaires, et insécurité régionale. Pour chaque risque, nous avons mis en place des stratégies de mitigation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-fr="Quel est l'impact social de ce projet ?" data-en="What is the social impact of this project?">Quel est l'impact social de ce projet ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Le projet soutiendra 200+ agriculteurs locaux dès la première année, créera 12 emplois directs d'ici la troisième année, et substituera 500 000$ d'importations. Il contribuera également à la souveraineté alimentaire de la RDC." data-en="The project will support 200+ local farmers from the first year, create 12 direct jobs by the third year, and substitute $500,000 of imports. It will also contribute to the food sovereignty of the DRC.">Le projet soutiendra 200+ agriculteurs locaux dès la première année, créera 12 emplois directs d'ici la troisième année, et substituera 500 000$ d'importations. Il contribuera également à la souveraineté alimentaire de la RDC.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span data-fr="Quelles sont les stratégies de sortie possibles pour les investisseurs ?" data-en="What are the possible exit strategies for investors?">Quelles sont les stratégies de sortie possibles pour les investisseurs ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-fr="Nous envisageons trois stratégies de sortie : rachat par un groupe agro-industriel régional (An 5-7), expansion et levée de Série A (valorisation $3-5M), ou rachat par l'équipe de direction." data-en="We are considering three exit strategies: buyout by a regional agro-industrial group (Year 5-7), expansion and Series A raise ($3-5M valuation), or buyback by the management team.">Nous envisageons trois stratégies de sortie : rachat par un groupe agro-industriel régional (An 5-7), expansion et levée de Série A (valorisation $3-5M), ou rachat par l'équipe de direction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-fr="Contactez-nous" data-en="Contact Us">Contactez-nous</h2>
+            <p class="section-subtitle" data-fr="Pour soutenir le projet ou obtenir plus d'informations, n'hésitez pas à nous contacter." data-en="To support the project or get more information, feel free to contact us.">Pour soutenir le projet ou obtenir plus d'informations, n'hésitez pas à nous contacter.</p>
+            
+            <div class="contact-buttons">
+                <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="btn btn-primary" data-fr="Faire un don" data-en="Make a donation">Faire un don</a>
+                <a href="https://www.paypal.com/ncp/payment/USHYKP6TWRM5Q" class="btn btn-secondary" data-fr="Investir" data-en="Invest">Investir</a>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>mac-drc@outlook.fr</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div>+243 994 780 251</div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 50px; margin-bottom: 20px;" data-fr="Envoyez-nous un message" data-en="Send us a message">Envoyez-nous un message</h3>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" data-fr="Nom complet" data-en="Full Name">Nom complet</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-fr="Adresse e-mail" data-en="Email Address">Adresse e-mail</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-fr="Sujet" data-en="Subject">Sujet</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-fr="Message" data-en="Message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="form-submit" data-fr="Envoyer le message" data-en="Send Message">Envoyer le message</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+            
+            <p style="margin-top: 50px; font-style: italic; font-size: 1.2rem;" data-fr=""Ensemble, construisons la souveraineté alimentaire de la RDC"" data-en=""Together, let's build the food sovereignty of the DRC"">"Ensemble, construisons la souveraineté alimentaire de la RDC"</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Matunda ya Afrika Company</h3>
+                    <p data-fr="The Pride of African Craftsmanship" data-en="The Pride of African Craftsmanship">The Pride of African Craftsmanship</p>
+                    <p data-fr="Transformer l'or des champs en or liquide" data-en="Transforming field gold into liquid gold">Transformer l'or des champs en or liquide</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-fr="Liens rapides" data-en="Quick Links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#problem" data-fr="Le Problème" data-en="The Problem">Le Problème</a></li>
+                        <li><a href="#solution" data-fr="Notre Solution" data-en="Our Solution">Notre Solution</a></li>
+                        <li><a href="#investment" data-fr="Opportunité d'Investissement" data-en="Investment Opportunity">Opportunité d'Investissement</a></li>
+                        <li><a href="#faq" data-fr="FAQ" data-en="FAQ">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-fr="Contact" data-en="Contact">Contact</h3>
+                    <p><i class="fas fa-envelope"></i> mac-drc@outlook.fr</p>
+                    <p><i class="fas fa-phone"></i> +243 994 780 251</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Matunda ya Afrika Company. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pitch Deck Download Button -->
+    <div class="download-btn" id="downloadBtn">
+        <i class="fas fa-download"></i>
+        <div class="tooltip" data-fr="Télécharger le Pitch Deck" data-en="Download the Pitch Deck">Télécharger le Pitch Deck</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Language Toggle
+        const frBtn = document.getElementById('fr-btn');
+        const enBtn = document.getElementById('en-btn');
+        const elementsWithTranslation = document.querySelectorAll('[data-fr][data-en]');
+        
+        frBtn.addEventListener('click', () => {
+            if (!frBtn.classList.contains('active')) {
+                frBtn.classList.add('active');
+                enBtn.classList.remove('active');
+                translateTo('fr');
+            }
+        });
+        
+        enBtn.addEventListener('click', () => {
+            if (!enBtn.classList.contains('active')) {
+                enBtn.classList.add('active');
+                frBtn.classList.remove('active');
+                translateTo('en');
+            }
+        });
+        
+        function translateTo(lang) {
+            elementsWithTranslation.forEach(element => {
+                if (lang === 'fr') {
+                    element.textContent = element.getAttribute('data-fr');
+                } else {
+                    element.textContent = element.getAttribute('data-en');
+                }
+            });
+        }
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle current answer
+                answer.classList.toggle('active');
+                question.classList.toggle('active');
+                
+                // Close other answers
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question) {
+                        otherQuestion.classList.remove('active');
+                        otherQuestion.nextElementSibling.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Fund Allocation Chart
+        const ctx = document.getElementById('fundChart').getContext('2d');
+        const fundChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Équipements & Infrastructure (52%)',
+                    'Fonds de roulement (32%)',
+                    'Marketing & Lancement (8%)',
+                    'Légal & Administratif (4%)',
+                    'Réserve de Contingence (4%)'
+                ],
+                datasets: [{
+                    data: [52, 32, 8, 4, 4],
+                    backgroundColor: [
+                        '#2F9B6D',
+                        '#F2C94C',
+                        '#8B4513',
+                        '#5D2F0B',
+                        '#6C757D'
+                    ],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: 'Poppins',
+                                size: 12
+                            },
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would normally send the data to a server
+            // For this example, we'll just show a success message
+            
+            formMessage.textContent = "Merci pour votre message. Nous vous répondrons dans les plus brefs délais.";
+            formMessage.classList.add('success');
+            formMessage.style.display = 'block';
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+        
+        // Download Pitch Deck
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            // Create a link element to download the PDF
+            const link = document.createElement('a');
+            link.href = 'MAC-DRC_agr%20-%20Pitch%20Deck.pdf';
+            link.download = 'MAC-DRC_Pitch_Deck.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
